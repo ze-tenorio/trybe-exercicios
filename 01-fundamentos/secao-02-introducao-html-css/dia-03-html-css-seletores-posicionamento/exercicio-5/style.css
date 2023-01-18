@@ -26,3 +26,19 @@ h1 em {
     font-size: 40px;
     border: 1px solid black;
 }
+
+ul.linguagens li:nth-child(1) {
+    color: blue;
+}
+
+ul.linguagens li:nth-child(2) {
+    color: blue;
+}
+
+ul.linguagens li:nth-child(3) {
+    color: blue;
+}
+
+ul.linguagens li.java {
+    background-color: pink;
+}
