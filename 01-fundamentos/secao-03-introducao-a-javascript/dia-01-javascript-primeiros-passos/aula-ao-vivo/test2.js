@@ -5,6 +5,4 @@ if (num1 === num2) {
     console.log(num1 + num2);
 } else if (num1 !== num2) {
     console.log(num1 * num2);
-} else if (num1 > num2) {
-    console.log(num1 / num2);
 }
