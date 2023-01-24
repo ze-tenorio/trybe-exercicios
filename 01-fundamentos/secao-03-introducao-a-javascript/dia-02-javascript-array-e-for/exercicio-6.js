@@ -15,3 +15,12 @@ if (media > 20) {
     console.log("Valor menor que 20");
 }
 
+let maiorNumero = 0;
+
+for (let index = 0; index < numbers.length; index += 1) {
+    if (maiorNumero < numbers[index]) {
+        maiorNumero = numbers[index];
+    }
+}
+
+console.log(maiorNumero);
