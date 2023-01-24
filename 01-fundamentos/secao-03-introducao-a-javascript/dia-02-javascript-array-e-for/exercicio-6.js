@@ -40,3 +40,15 @@ for (let index = 0; index < numbers.length; index += 1) {
 }
 
 console.log(impares);
+
+//Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+
+let menorNumero = maiorNumero;
+
+for (let index = 0; index < numbers.length; index += 1) {
+    if (menorNumero > numbers[index]) {
+        menorNumero = numbers[index];
+    }
+}
+
+console.log(menorNumero);
