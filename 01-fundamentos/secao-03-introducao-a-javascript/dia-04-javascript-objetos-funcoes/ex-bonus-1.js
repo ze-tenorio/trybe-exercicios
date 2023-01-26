@@ -1,5 +1,5 @@
 //armazenar o número romano que quero avaliado
-let number = 'LXX'
+let number = 'LXIX'
 
 //armazenar o retorno
 let defaultNumber = 0;

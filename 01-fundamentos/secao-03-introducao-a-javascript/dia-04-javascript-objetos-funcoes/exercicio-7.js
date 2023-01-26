@@ -12,4 +12,4 @@ function positiveNegative(value) {
     return answer;
 }
 
-console.log(positiveNegative(0))
+console.log(positiveNegative(0));

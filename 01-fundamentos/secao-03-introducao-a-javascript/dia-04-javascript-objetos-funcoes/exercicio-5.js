@@ -13,5 +13,5 @@ function greaterNumber(num1, num2) {
     return greaterNumber;
 }
 
-console.log(greaterNumber(1, 2));
+console.log(greaterNumber(num1, num2));
 
