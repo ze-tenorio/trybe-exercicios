@@ -12,4 +12,16 @@ const substituaX = nome => {
     return novaFrase;
 }
 
-console.log(substituaX('Bebeto'))
+const minhasSkills = (frase) => {
+    const skills = ['HTML', 'CSS', 'JavaScript']
+    let lessonsLearned = `
+    ${frase}
+    Minhas três principais habilidades são:`;
+    for (skill of skills) {
+        lessonsLearned = `${lessonsLearned} 
+        ${skill}`
+    }
+    return lessonsLearned;
+}
+
+console.log(minhasSkills(substituaX('Bebeto')))
