@@ -1,8 +1,8 @@
 //armazenar o número romano que quero avaliado
-let number = 'LXIX'
+let romanNumber = 'LVX'
 
 //armazenar o retorno
-let defaultNumber = 0;
+let decimalNumber = 0;
 
 //armazenar as letras e quanto vale cada uma
 let romanNumbersValues = {
@@ -15,18 +15,14 @@ let romanNumbersValues = {
     M: 1000,
 }
 
-if (number.length === 1) {
-    defaultNumber = romanNumbersValues[number];
-} else {
-    if (romanNumbersValues[number[0]] < romanNumbersValues[number[number.length - 1]]) {
-        defaultNumber = romanNumbersValues[number[number.length - 1]] - romanNumbersValues[number[0]]; 
+//loop que percorre a string romanNumber de trás pra frente
+for (let iRoman = romanNumber.length - 1; iRoman >= 0; iRoman -= 1) {
+    //condicionais
+    if (romanNumbersValues[romanNumber[iRoman]] >= decimalNumber) {
+        decimalNumber += romanNumbersValues[romanNumber[iRoman]]
     } else {
-        defaultNumber = romanNumbersValues[number[0]] + romanNumbersValues[number[number.length - 1]];
+        decimalNumber -= romanNumbersValues[romanNumber[iRoman]];
     }
 }
 
-console.log(defaultNumber);
-
-//criar condicionais de quando uma letra que vale mais vem depois de uma que vale menos adiciona
-
-//criar condicionais de quando uma letra que vale menos vem antes de uma que vale mais subtrai
+console.log(decimalNumber);
