@@ -16,6 +16,5 @@
   </main>
   <script>
     // Remova a tag h2, filha do elemento elementoOndeVoceEsta.
-    const elementRemoved = document.querySelector('#elementoOndeVoceEsta h2')
-    document.getElementById('elementoOndeVoceEsta').removeChild(elementRemoved);
+    document.getElementById('elementoOndeVoceEsta').firstElementChild.remove();
   </script>
