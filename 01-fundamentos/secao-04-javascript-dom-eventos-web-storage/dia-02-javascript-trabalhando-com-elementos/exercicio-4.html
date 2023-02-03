@@ -79,7 +79,40 @@
       newP.innerText = 'Algum texto';
       section.appendChild(newP);
 
-      //
+      // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      const leftSection = document.createElement('section');
+      leftSection.className = 'left-content';
+      main.appendChild(leftSection);
+
+      // Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      const rightSection = document.createElement('section');
+      rightSection.className = 'right-content';
+      main.appendChild(rightSection);
+
+      // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+      const image = document.createElement('img');
+      image.className = 'small-image';
+      image.src = 'https://picsum.photos/200';
+      leftSection.appendChild(image);
+
+      // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      const numbersList = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      const list = document.createElement('ul');
+      list.id = 'listaNaoOrdenada'
+      rightSection.appendChild(list);
+
+      for (const number of numbersList) {
+        const listItem = document.createElement('li');
+        listItem.innerText = number;
+        list.appendChild(listItem);
+      }
+
+      // Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+      for (let index = 1; index <= 3; index += 1) {
+        const tagsHTres = document.createElement('h3');
+        main.appendChild(tagsHTres);
+      }
+
     </script>
   </body>
 </html>
