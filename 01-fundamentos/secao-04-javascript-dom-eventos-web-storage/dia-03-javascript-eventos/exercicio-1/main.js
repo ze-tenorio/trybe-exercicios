@@ -13,6 +13,8 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 const allLi = document.querySelector('li');
 
+//teste
+
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
