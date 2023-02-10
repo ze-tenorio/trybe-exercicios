@@ -1,0 +1,5 @@
+/* primeiro passo é criar um container com display de flex */
+
+.flex-container {
+  display: flex;
+}
