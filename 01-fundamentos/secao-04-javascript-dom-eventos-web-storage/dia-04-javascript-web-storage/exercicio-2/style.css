@@ -1,0 +1,18 @@
+header {
+    border: 2px solid black;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+.attributes {
+    display: inline-block;
+    padding: 20px;
+}
+
+button {
+    display: block;
+    width: 100%;
+}
