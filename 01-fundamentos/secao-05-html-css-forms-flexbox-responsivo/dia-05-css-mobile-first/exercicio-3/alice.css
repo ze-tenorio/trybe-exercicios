@@ -1,0 +1,118 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  header p {
+    font-size: 40px;
+  }
+
+  header {
+    background-color: salmon;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  .aside-one ul , .aside-two ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  article {
+    padding: 40px
+  }
+
+  footer {
+    padding: 40px;
+    background-color: salmon;
+  }
+
+  @media  screen and (min-width: 1200px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header p {
+        font-size: 30px;
+    }
+
+    nav ul {
+        font-size: 25px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    article {
+        padding: 100px;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header p {
+        font-size: 30px;
+    }
+
+    header nav ul {
+        padding: 10px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .aside-one ul , .aside-two ul {
+        display: inline;
+      }
+
+    article {
+        padding: 20px;
+        width: 100%;
+    }
+
+    footer {
+        padding: 20px;
+    }
+  }
