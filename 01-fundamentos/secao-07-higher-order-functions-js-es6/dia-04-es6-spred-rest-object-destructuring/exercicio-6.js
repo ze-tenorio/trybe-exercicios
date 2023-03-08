@@ -29,6 +29,14 @@ const people = [
   
   // escreva filterPeople abaixo
 
+//   const filterPeople = (arr) => {
+//     const newArr = arr.filter((person) => person.nationality === 'Australian' && person.bornIn < 2001);
+//     return newArr.map((person) => {
+//         const { name } = person;
+//         return name;
+//     })
+//   }
+
   const filterPeople = (arr) => {
     const newArr = arr.filter(({ nationality, bornIn }) => nationality === 'Australian' && bornIn > 1900 & bornIn <= 2000);
     return newArr;

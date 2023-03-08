@@ -65,5 +65,6 @@ const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Fra
 
 // const reduceNames = (arr) => arr.map((book) => book.author.name).reduce((acc, curr) => `${acc}, ${curr}`);
 
-const reduceNames = (arr) => arr.reduce((acc, curr) => `${acc}${curr.author.name}, `, '') 
+const reduceNames = (arr) => arr.reduce((acc, curr) => `${acc}${curr.author.name}, `, '')
+
 console.log(reduceNames(books));
