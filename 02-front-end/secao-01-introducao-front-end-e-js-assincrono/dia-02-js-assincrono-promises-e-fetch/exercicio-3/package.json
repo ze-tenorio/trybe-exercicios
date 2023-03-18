@@ -1,0 +1,23 @@
+{
+  "name": "pet-app",
+  "version": "1.0.0",
+  "description": "app that shows random cats and dogs images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open"
+  },
+  "keywords": [
+    "js",
+    "css",
+    "html",
+    "node",
+    "npm",
+    "front-end"
+  ],
+  "author": "Jose Tenorio",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.2.0"
+  }
+}
