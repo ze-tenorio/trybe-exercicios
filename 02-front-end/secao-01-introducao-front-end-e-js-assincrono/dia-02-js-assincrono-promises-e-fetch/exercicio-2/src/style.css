@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    background-color: #a3b18a;
+}
+
+#hero-photo-container {
+    height: 300px;
+}
+
+img {
+    height: 300px;
+}
+
+#sort-btn {
+    padding: 10px 30px;
+    border: none;
+    background-color: #3a5a40;
+    color: white;
+}
