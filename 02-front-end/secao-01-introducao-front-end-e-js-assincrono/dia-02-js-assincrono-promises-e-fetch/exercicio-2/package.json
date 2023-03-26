@@ -1,0 +1,23 @@
+{
+  "name": "superhero-generator",
+  "version": "1.0.0",
+  "description": "an app that generate random superheroes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "front-end",
+    "javascript",
+    "css",
+    "html"
+  ],
+  "author": "Jose Tenorio",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^4.2.0"
+  }
+}
