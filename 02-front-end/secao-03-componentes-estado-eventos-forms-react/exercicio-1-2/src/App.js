@@ -2,26 +2,36 @@ import './App.css';
 import React from 'react';
 
 class App extends React.Component {
+  state = {
+    btnOne: 0,
+    btnTwo: 0,
+    btnThree: 0
+  }
+  
   handleClick = () => {
-    console.log(this);
-    console.log('clicou!');
+    this.setState((prev) => ({
+      btnOne: prev.btnOne + 1
+    }))
   }
 
   handleClick2 = () => {
-    console.log(this);
-    console.log('clicou em nós');
+    this.setState((prev) => ({
+      btnTwo: prev.btnTwo + 1
+    }))
   }
 
   handleClick3 = () => {
-    console.log('clicou nos mano');
+    this.setState((prev) => ({
+      btnThree: prev.btnThree - 1
+    }))
   }
   
   render () {
     return (
       <section>
-        <button onClick={this.handleClick}>Clique em mim!</button>
-        <button onClick={this.handleClick2}>Clica em nós!</button>
-        <button onClick={this.handleClick3}>Clica nos mano!</button>
+        <button onClick={this.handleClick}>{this.state.btnOne}</button>
+        <button onClick={this.handleClick2}>{this.state.btnTwo}</button>
+        <button onClick={this.handleClick3}>{this.state.btnThree}</button>
       </section>
     )
   }
