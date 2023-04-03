@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react';
 
+// atualizações
+
 class App extends React.Component {
   state = {
     btnOne: 0,
