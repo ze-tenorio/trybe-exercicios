@@ -2,12 +2,18 @@ import React, { Component } from 'react'
 
 export class Form extends Component {
   state = {
-    inputedName: ''
+    name: '',
+    email: '',
+    opinion: '',
+    food: '',
+    agreed: false
   }
 
-  handleName = (event) => {
+  handleChange = ({ target }) => {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
-      inputedName: event.target.value
+      [name]: value
     })
   }
   
@@ -15,19 +21,35 @@ export class Form extends Component {
     return (
       <form>
         <label>Comida Preferida:
-          <select></select>
+          <select name="food" value={this.state.food} onChange={this.handleChange}>
+            <option value="Pizza">Pizza</option>
+            <option value="Japa">Japa</option>
+            <option value="Churrasco">Churrasco</option>
+            <option value="Hamburguer">Hamburguer</option>
+          </select>
         </label>
 
-        <label>Nome:
-          <input type='text' value={this.state.inputedName} onChange={this.handleName}></input>
-        </label>
+        <fieldset>
+          <label>Nome:
+            <input name='name' type='text' value={this.state.name} onChange={this.handleChange}></input>
+          </label>
+          
+          <label>E-mail:
+            <input name='email' type='email' value={this.state.email} onChange={this.handleChange}></input>
+          </label>
+        </fieldset>
         
-        <label>E-mail:
-          <input type='email'></input>
-        </label>
 
         <label>Opinião:
-          <textarea></textarea>
+          <textarea name='opinion' value={this.state.opinion} onChange={this.handleChange}></textarea>
+        </label>
+
+        <label htmlFor="">
+          <input type="file" name="fileinput" id="fileinput" />
+        </label>
+
+        <label htmlFor="agreed">Concordo
+          <input type="checkbox" name="agreed" checked={this.state.agreed} id="agreed" onChange={this.handleChange}/>
         </label>
       </form>
     )
