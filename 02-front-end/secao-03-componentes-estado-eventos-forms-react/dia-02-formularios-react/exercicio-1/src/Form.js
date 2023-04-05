@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PersonalInfo from './components/PersonalInfo';
 
 export class Form extends Component {
   state = {
@@ -6,7 +7,18 @@ export class Form extends Component {
     email: '',
     opinion: '',
     food: '',
-    agreed: false
+    agreed: false,
+    isValid: false
+  }
+
+  validateField = () => {
+    const { email, name, agreed } = this.state;
+    const emailError = email.includes('@');
+    const nameError = name.length > 0;
+    const nonAgreed = agreed === false;
+    this.setState({
+      isValid: emailError && nameError && !nonAgreed
+    })
   }
 
   handleChange = ({ target }) => {
@@ -14,7 +26,7 @@ export class Form extends Component {
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({
       [name]: value
-    })
+    }, this.validateField)
   }
   
   render() {
@@ -29,16 +41,11 @@ export class Form extends Component {
           </select>
         </label>
 
-        <fieldset>
-          <label>Nome:
-            <input name='name' type='text' value={this.state.name} onChange={this.handleChange}></input>
-          </label>
-          
-          <label>E-mail:
-            <input name='email' type='email' value={this.state.email} onChange={this.handleChange}></input>
-          </label>
-        </fieldset>
-        
+        <PersonalInfo 
+          nameValue={this.state.name} 
+          emailValue={this.state.email} 
+          handleChange={this.handleChange}
+        />
 
         <label>Opinião:
           <textarea name='opinion' value={this.state.opinion} onChange={this.handleChange}></textarea>
@@ -51,6 +58,9 @@ export class Form extends Component {
         <label htmlFor="agreed">Concordo
           <input type="checkbox" name="agreed" checked={this.state.agreed} id="agreed" onChange={this.handleChange}/>
         </label>
+
+        <p>{`Esse formulário é válido? ${this.state.isValid}`}</p>
+        <button disabled={!this.state.isValid}>Enviar</button>
       </form>
     )
   }

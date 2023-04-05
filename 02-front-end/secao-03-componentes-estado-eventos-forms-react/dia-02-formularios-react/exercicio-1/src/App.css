@@ -2,3 +2,13 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+.input-field:focus {
+  outline: none !important;
+  border-color: red;
+}
+
+.input-field-valid:focus {
+  outline: none !important;
+  border-color: green;
+}
