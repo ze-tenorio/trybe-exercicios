@@ -12,4 +12,9 @@ app.get('/movies/:id', async (req, res) => {
   res.status(200).json({ selectedMovie });
 })
 
+app.get('/movies', async (req, res) => {
+  const movies = await readMovies();
+  res.status(200).json({ movies });
+})
+
 module.exports = app;
