@@ -21,7 +21,7 @@ const writeMovie = async (movieDetails) => {
   const newMovies = [...movies, newMovie];
   await fs.writeFile('./src/movies.json', JSON.stringify(newMovies));
   return newMovie;
-}
+};
 
 const editMovie = async (id, movieDetails) => {
   const movies = await readMovies();
@@ -34,10 +34,17 @@ const editMovie = async (id, movieDetails) => {
   });
   await fs.writeFile('./src/movies.json', JSON.stringify(editedMovies));
   return editedMovie;
-}
+};
+
+const removeMovie = async (id) => {
+  const movies = await readMovies();
+  const newMovies = movies.filter((movie) => movie.id !== id);
+  await fs.writeFile('./src/movies.json', JSON.stringify(newMovies));
+};
 
 module.exports = {
   readMovies,
   writeMovie,
   editMovie,
+  removeMovie,
 }
