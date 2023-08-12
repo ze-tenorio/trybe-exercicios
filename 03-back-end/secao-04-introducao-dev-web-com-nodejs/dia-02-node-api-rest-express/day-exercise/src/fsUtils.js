@@ -23,7 +23,21 @@ const writeMovie = async (movieDetails) => {
   return newMovie;
 }
 
+const editMovie = async (id, movieDetails) => {
+  const movies = await readMovies();
+  const editedMovie = {id, ...movieDetails};
+  const editedMovies = movies.map((movie) => {
+    if (movie.id === id) {
+      return editedMovie;
+    }
+    return movie;
+  });
+  await fs.writeFile('./src/movies.json', JSON.stringify(editedMovies));
+  return editedMovie;
+}
+
 module.exports = {
   readMovies,
   writeMovie,
+  editMovie,
 }
