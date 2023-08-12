@@ -1,5 +1,5 @@
 const express = require('express');
-const { readMovies } = require('./fsUtils');
+const { readMovies, writeMovie } = require('./fsUtils');
 
 const app = express();
 
@@ -15,6 +15,12 @@ app.get('/movies/:id', async (req, res) => {
 app.get('/movies', async (req, res) => {
   const movies = await readMovies();
   res.status(200).json({ movies });
+})
+
+app.post('/movies', async (req, res) => {
+  const movieDetails = req.body;
+  const newMovie = await writeMovie(movieDetails);
+  res.status(200).json({ newMovie });
 })
 
 module.exports = app;
