@@ -1,0 +1,11 @@
+{
+  "users":[
+    {
+      "email":"fatherUser@user.com",
+      "password":"sdawdhkjhahw",
+      "firstName":"User",
+      "phone":8888888888,
+      "token": "dawASdawdaW5"
+    }
+  ]
+}
