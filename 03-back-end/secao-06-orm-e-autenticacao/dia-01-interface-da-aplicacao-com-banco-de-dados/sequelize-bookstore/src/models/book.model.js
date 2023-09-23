@@ -1,5 +1,5 @@
-const bookModel = (sequelize, DataTypes) => {
-  const book = sequelize.define('book', {
+const BookModel = (sequelize, DataTypes) => {
+  const Book = sequelize.define('book', {
     title: DataTypes.STRING,
     author: DataTypes.STRING,
     pageQuantity: DataTypes.INTEGER,
@@ -9,8 +9,8 @@ const bookModel = (sequelize, DataTypes) => {
   (async () => {
     await sequelize.sync();
   })();
-  return book;
+  return Book;
 };
 
-module.exports = bookModel;
+module.exports = BookModel;
 
