@@ -12,3 +12,7 @@ app.get('/books', BookController.getAll);
 app.get('/books/:id', BookController.getById);
 
 app.post('/books', BookController.createBook);
+
+app.put('/books/:id', BookController.updateBook);
+
+app.delete('/books/:id', BookController.removeBook);

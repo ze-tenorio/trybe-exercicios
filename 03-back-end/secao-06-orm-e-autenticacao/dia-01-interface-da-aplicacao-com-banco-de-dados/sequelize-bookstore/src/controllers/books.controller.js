@@ -35,8 +35,39 @@ const createBook = async (req, res) => {
   };
 };
 
+const removeBook = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const book = await BookService.removeBook(id);
+    if (book === 0) {
+      return res.status(404).json({ message: 'Book not found' });
+    }
+    return res.status(200).json({ message: 'Book deleted' });
+  } catch (e) {
+    console.log(e.message);
+    res.status(500).json({ message: 'Ocorreu um erro' });
+  };
+};
+
+const updateBook = async (req, res) => {
+  const { id } = req.params;
+  const newBookData = req.body;
+  try {
+    const book = await BookService.updateBook(id, newBookData);
+    if (book[0] === 0) {
+      return res.status(404).json({ message: 'Book not found' });
+    }
+    return res.status(200).json(book);
+  } catch (e) {
+    console.log(e.message);
+    res.status(500).json({ message: 'Ocorreu um erro' });
+  };
+};
+
 module.exports = {
   getAll,
   getById,
   createBook,
+  removeBook,
+  updateBook,
 }
