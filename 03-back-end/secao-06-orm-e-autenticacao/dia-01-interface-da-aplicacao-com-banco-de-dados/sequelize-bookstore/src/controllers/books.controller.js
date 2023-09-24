@@ -24,7 +24,19 @@ const getById = async (req, res) => {
   }
 };
 
+const createBook = async (req, res) => {
+  const { title, author, pageQuantity } = req.body;
+  try {
+    const newBook = await BookService.createBook(title, author, pageQuantity);
+    return res.status(201).json(newBook);
+  } catch (e) {
+    console.log(e.message);
+    res.status(500).json({ message: 'Ocorreu um erro' });
+  };
+};
+
 module.exports = {
   getAll,
   getById,
+  createBook,
 }

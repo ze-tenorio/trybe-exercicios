@@ -10,11 +10,11 @@ module.exports = {
         primaryKey: true
       },
       title: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false
       },
       author: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         allowNull: false
       },
       pageQuantity: {
@@ -38,7 +38,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('books');
+    await queryInterface.dropTable('Books');
     /**
      * Add reverting commands here.
      *
