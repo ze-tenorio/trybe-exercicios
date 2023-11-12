@@ -1,5 +1,6 @@
 import Tv from "./ex1";
 import { Customer, Order, OrderItem } from "./exercicio3/Restaurant";
+import Data from "./exercicio5/Data";
 
 class Person {
   name: string;
@@ -26,6 +27,8 @@ class Person {
 // p1.sleep();
 // p2.sleep();
 
+// Exercicio in-learning
+
 // const samsungTv = new Tv('Samsung', 55, '4K', ['HDMI', 'USB', 'Bluetooth']);
 
 // samsungTv.turnOn();
@@ -34,9 +37,21 @@ class Person {
 
 // console.log(samsungTv.connectedTo);
 
-const customer0 = new Customer('João');
-const item1 = new OrderItem('Pizza', 20);
-const item2 = new OrderItem('Coke', 5);
-const order0 = new Order(customer0, [item1, item2], 'Credit Card', 0.1);
+// Exercicio 3
 
-console.log(order0.totalOrderSumWithDiscount());
+// const customer0 = new Customer('João');
+// const item1 = new OrderItem('Pizza', 20);
+// const item2 = new OrderItem('Coke', 5);
+// const order0 = new Order(customer0, [item1, item2], 'Credit Card', 0.1);
+
+// console.log(order0.totalOrderSumWithDiscount());
+
+// Exercicio 5
+
+const data1 = new Data(1, 1, 2021);
+const data2 = new Data(2, 1, 2021);
+console.log(data1.compareDates(data2));
+console.log(data1.getMesExtenso());
+console.log(data1.isLeapYear());
+console.log(data1.format('dd de M de aa'));
+
