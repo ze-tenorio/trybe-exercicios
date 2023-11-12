@@ -28,3 +28,7 @@ p2.sleep();
 const samsungTv = new Tv('Samsung', 55, '4K', ['HDMI', 'USB', 'Bluetooth']);
 
 samsungTv.turnOn();
+
+samsungTv.connectTo = 'HDMI';
+
+console.log(samsungTv.connectedTo);

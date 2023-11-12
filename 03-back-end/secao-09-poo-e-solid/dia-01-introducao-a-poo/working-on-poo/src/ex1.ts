@@ -1,18 +1,32 @@
 export default class Tv {
-  brand: string;
-  size: number;
-  resolution: string;
-  connections: string[];
-  connectedTo?: string;
+  private _brand: string;
+  private _size: number;
+  private _resolution: string;
+  private _connections: string[];
+  private _connectedTo?: string;
 
   constructor(b: string, s: number, r: string, c: string[]) {
-    this.brand = b;
-    this.size = s;
-    this.resolution = r;
-    this.connections = c;
+    this._brand = b;
+    this._size = s;
+    this._resolution = r;
+    this._connections = c;
+  }
+
+  get connectedTo() {
+    return this._connectedTo || 'No connection';
+  };
+
+  set connectTo(c: string) {
+    if (!(this._connections.includes(c))) {
+      console.log('Sorry, connection unavailable');
+      return;
+    }
+    this._connectedTo = c;
+    console.log(`Connected to ${c}`);
   }
 
   turnOn() {
-    console.log(`${this.brand}, ${this.size} pol., ${this.resolution}, available to ${this.connections}: Turned on`);
+    console.log(`${this._brand}, ${this._size} pol., ${this._resolution}, available to ${this._connections}: Turned on`);
   }
 }
+
