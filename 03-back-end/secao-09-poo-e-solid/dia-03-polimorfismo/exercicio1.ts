@@ -5,6 +5,10 @@ abstract class Character {
   }
   abstract talk(): void;
   abstract specialMove():void;
+  static characterPresentation(character: Character): void {
+    character.talk();
+    character.specialMove();
+  }
 }
 
 class MeleeCharacter extends Character {
@@ -27,13 +31,8 @@ class LongRangeCharacter extends Character {
   }
 }
 
-const characterTurn = (character: Character) => {
-  character.talk();
-  character.specialMove();
-}
-
 const yoshi = new MeleeCharacter('Yoshi');
 const samus = new LongRangeCharacter('Samus');
 
-characterTurn(yoshi);
-characterTurn(samus);
+Character.characterPresentation(yoshi);
+Character.characterPresentation(samus);
