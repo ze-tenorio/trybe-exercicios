@@ -1,0 +1,15 @@
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/bin/Debug/net6.0/Airline
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/bin/Debug/net6.0/Airline.deps.json
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/bin/Debug/net6.0/Airline.runtimeconfig.json
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/bin/Debug/net6.0/Airline.dll
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/bin/Debug/net6.0/Airline.pdb
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/Airline.csproj.AssemblyReference.cache
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/Airline.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/Airline.AssemblyInfoInputs.cache
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/Airline.AssemblyInfo.cs
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/Airline.csproj.CoreCompileInputs.cache
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/Airline.dll
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/refint/Airline.dll
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/Airline.pdb
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/Airline.genruntimeconfig.cache
+/Volumes/SD Trybe/exercicios/trybe-exercicios/05-eletiva-c#/secao-02-poo-c#/dia-02-composicao-heranca-c#/Airline/obj/Debug/net6.0/ref/Airline.dll
